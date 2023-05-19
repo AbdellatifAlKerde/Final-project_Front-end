@@ -1,0 +1,15 @@
+.product-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.product-header-add-to-cart {
+  cursor: pointer;
+}

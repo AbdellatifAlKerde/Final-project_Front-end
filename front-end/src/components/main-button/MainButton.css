@@ -1,0 +1,22 @@
+.main-button {
+  background-color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-mini);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: transform 0.5s;
+  box-shadow: var(--box-shadow);
+  color: var(--primary-color);
+}
+
+.main-button:disabled,
+button[disabled] {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.main-button:hover {
+  opacity: 0.9;
+}

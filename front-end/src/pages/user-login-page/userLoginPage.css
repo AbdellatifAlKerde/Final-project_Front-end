@@ -1,0 +1,74 @@
+.user-login-page-container {
+  height: 100vh;
+  background-image: url("../../assets/images/authentic-italian-pasta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.user-login-section {
+  width: 30%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: 10rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.user-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-login-heading {
+  margin-bottom: 2rem;
+}
+
+.user-login-heading h2 {
+  font-size: 2rem;
+  color: var(--text-color-1);
+}
+
+.signup-login-nav {
+  text-align: center;
+  cursor: pointer;
+}
+
+.signup-login-nav:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.user-login-button {
+  margin-top: 1rem;
+}
+
+.user-login-error-message {
+  color: var(--accent-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .user-login-section {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .user-login-section {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .user-login-section {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

@@ -1,0 +1,10 @@
+.global-text-field {
+  width: 100%;
+  font-size: 1rem;
+  padding: 16px 15px;
+  border-radius: var(--border-radius-mini);
+  border: none;
+  outline-color: #222;
+  /* box-shadow: var(--box-shadow); */
+  background-color: var(--secondary-color);
+}

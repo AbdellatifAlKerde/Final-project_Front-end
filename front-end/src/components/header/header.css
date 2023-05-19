@@ -1,0 +1,36 @@
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  height: 97px;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.main-header-logo {
+  cursor: pointer;
+}
+
+.main-header div {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.header-navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-navigation :last-child {
+  margin-left: 15px;
+}
+
+.bg-color {
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
