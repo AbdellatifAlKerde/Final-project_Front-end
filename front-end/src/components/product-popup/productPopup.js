@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./productPopup.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import MainButton from "../main-button/MainButton";
+import { ProductDataContext } from "../../components/product-data-provider/productDataProvider";
 
 function ProductPopup(props) {
+  const { addToCart } = useContext(ProductDataContext);
+
   return (
     <div className="overlay">
       <div className="product-popup-container">
@@ -19,8 +22,22 @@ function ProductPopup(props) {
             <p>{props.description}</p>
             <p>{props.price}$</p>
           </div>
+          <div className="product-popup-select">
+            <input
+              type="number"
+              min={1}
+              max={100}
+              name={props.inputName}
+              defaultValue={props.inputDefaultValue}
+              onChange={props.inputOnChange}
+            />
+          </div>
           <div>
-            <MainButton style={{ width: "100%" }} name="ADD TO CART" />
+            <MainButton
+              style={{ width: "100%" }}
+              name={props.buttonName}
+              onClick={props.onClickAddToCart}
+            />
           </div>
         </div>
       </div>

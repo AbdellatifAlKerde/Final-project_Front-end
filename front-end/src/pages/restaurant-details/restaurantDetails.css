@@ -1,0 +1,73 @@
+.restaurant-details-page-hero {
+  height: 200px;
+}
+
+.restaurant-details-page-desc {
+  padding-inline: 2rem;
+}
+
+.restaurant-details-title h2 {
+  font-size: 3rem;
+}
+
+.restaurant-details-title div {
+  font-size: 1.2rem;
+}
+
+.restaurant-details-cat-prod {
+  display: flex;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.restaurant-categories {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 0.5rem;
+}
+
+.restaurant-categories a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color-1);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.restaurant-products {
+  width: 70%;
+}
+
+.restaurant-products-by-cat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.restaurant-products-by-cat {
+  margin-bottom: 2rem;
+}
+
+.restaurant-products-by-cat-title {
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  border-bottom: 2px solid #999;
+  padding-bottom: 1rem;
+}
+.restaurant-categories-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.no-items-message {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}

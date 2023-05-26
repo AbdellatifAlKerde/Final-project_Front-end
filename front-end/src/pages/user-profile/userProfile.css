@@ -1,0 +1,52 @@
+.user-profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile-heading {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.user-profile-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-inline: 2rem;
+  margin-block: 2rem;
+}
+
+.user-profile-data div {
+  /* width: 100%; */
+  flex: 1 1 700px;
+}
+
+.user-profile-orders-heading {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: var(--secondary-color);
+}
+
+.user-profile-page-container {
+  width: 100%;
+}
+
+.user-edit-profile {
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
+}
+
+.user-edit-profile-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-profile-order-table-container {
+  padding-inline: 2rem;
+  overflow: hidden;
+}

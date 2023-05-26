@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -61,16 +61,42 @@
 }
 
 .product-popup-desc h2 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   margin-bottom: 1rem;
 }
 
 .product-popup-desc :nth-child(2) {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   margin-bottom: 1rem;
+  color: var(--text-color-3);
 }
 
 .product-popup-desc :nth-child(3) {
+  font-size: clamp(1.8rem, 2vw, 2rem);
   font-size: 2rem;
   font-weight: 600;
+}
+
+input[type="number"] {
+  border-radius: var(--border-radius);
+  border: none;
+  padding: 0.6rem;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .product-popup-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .product-popup-img {
+    width: 100%;
+  }
+
+  .product-popup-desc {
+    width: 100%;
+  }
 }

@@ -1,0 +1,36 @@
+.restaurants-page-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 2rem;
+  gap: 1rem;
+  min-height: 50vh;
+}
+
+.restaurant-page-hero {
+  height: 300px;
+  background: url("../../assets/images/dark-surface-with-blank-space-fast-food-menu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+  margin-inline: 2rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.restaurant-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00000057;
+  z-index: -1;
+}
+
+.restaurant-page-hero h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  padding-top: 7rem;
+  padding-left: 4rem;
+}

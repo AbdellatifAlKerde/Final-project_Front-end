@@ -16,6 +16,15 @@
   flex-direction: column;
   justify-content: center;
   transition: 0.5s;
+  position: relative;
+}
+
+.user-login-back-arrow {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  scale: 1.5;
+  cursor: pointer;
 }
 
 .user-login-form {
@@ -70,5 +79,11 @@
     width: 100%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    padding-inline: 2rem;
+  }
+
+  .user-login-back-arrow {
+    left: 40px;
+    top: 10px;
   }
 }

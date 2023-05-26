@@ -35,8 +35,9 @@ function AdminLoginPage() {
       );
       console.log(response);
       if (response.status === 200) {
-        Cookies.set("admin-token", response.data.token);
-        localStorage.setItem("isSuper", response.data.isSuper);
+        const oneWeek = 7 * 24 * 60 * 60 * 1000;
+        Cookies.set("admin-token", response.data.token, { expires: oneWeek });
+        Cookies.set("isSuper", response.data.isSuper, { expires: oneWeek });
       }
       if (response.data.isSuper) {
         navigate("/admin-dashboard");

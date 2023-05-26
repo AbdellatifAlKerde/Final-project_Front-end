@@ -1,11 +1,12 @@
 .main-header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--primary-color);
   padding: 20px 40px;
   height: 97px;
   z-index: 1;
@@ -14,6 +15,7 @@
 
 .main-header-logo {
   cursor: pointer;
+  width: 200px;
 }
 
 .main-header div {
@@ -26,11 +28,100 @@
   gap: 1rem;
 }
 
-.header-navigation :last-child {
-  margin-left: 15px;
-}
-
 .bg-color {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
+}
+
+.main-header-navigation-links {
+  color: var(--text-color-1);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-header-navigation-links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color-1);
+  opacity: 0;
+}
+
+.main-header-navigation-links.active::before {
+  opacity: 1;
+}
+
+.mobile-header-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1.5;
+}
+
+.mobile-header-navigation:active {
+  animation: burger-rotate 0.5s;
+}
+
+@keyframes burger-rotate {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 180deg;
+  }
+}
+
+.mobile-navigation-dopdown-overlay {
+  position: fixed;
+  top: 96px;
+  right: 0;
+  width: 100%;
+  background-color: #00000074;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9;
+}
+
+.mobile-navigation-dopdown-overlay.open {
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.mobile-navigation-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--primary-color);
+  width: 350px;
+  height: 100vh;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  gap: 1rem;
+  transition: 0.5s;
+}
+
+.mobile-navigation-dropdown.open {
+  transform: translateX(350px);
+}
+
+@media (min-width: 1200px) {
+  .mobile-header-navigation {
+    display: none;
+  }
+
+  .mobile-navigation-dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-navigation {
+    display: none;
+  }
 }

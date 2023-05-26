@@ -1,0 +1,30 @@
+.category-card {
+  width: 100px;
+  height: 120px;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.category-card-selected {
+  border-color: var(--accent-color);
+}
+
+.category-card:hover {
+  border-color: var(--accent-color);
+}
+
+.category-card-img {
+  height: 60%;
+}
+
+.category-card-img img {
+  object-fit: contain;
+  width: 50px;
+}
+
+.category-card p {
+  font-weight: 500;
+}

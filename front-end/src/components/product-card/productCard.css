@@ -1,12 +1,23 @@
 .product-card {
   width: 400px;
-  margin-left: 1rem;
   cursor: pointer;
 }
 
 .product-card-img {
   width: 100%;
   height: 200px;
+  border-radius: var(--border-radius);
+}
+
+.product-card-img-skeleton {
+  width: 100%;
+  height: 200px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+.product-card-img-skeleton img {
+  display: none;
 }
 
 .product-card-img img {

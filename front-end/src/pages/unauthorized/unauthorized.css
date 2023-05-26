@@ -1,0 +1,26 @@
+.unauthorized-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+}
+
+.unauthorized-page-container h2 {
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--accent-color);
+}
+
+.unauthorized-page-container div:nth-child(2) {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  margin-bottom: 1rem;
+}
+
+.unauthorized-page-container div:nth-child(3),
+.unauthorized-page-container div:nth-child(4) {
+  font-size: 1.1rem clamp(0.8rem, 1.5vw, 1.1rem);
+  margin-bottom: 1rem;
+}

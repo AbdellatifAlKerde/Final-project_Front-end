@@ -1,0 +1,77 @@
+.owner-register-page {
+  min-height: 92.4vh;
+  background: url("../../assets/images/owner-back-img-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.owner-register-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000005a;
+  z-index: -1;
+}
+
+.owner-register-container {
+  width: 600px;
+  height: 100%;
+  background-color: var(--primary-color);
+  grid-column: 8 / 12;
+  padding: 3rem;
+}
+
+.owner-register-form h2 {
+  margin-bottom: 2rem;
+}
+
+.owner-register-form a {
+  color: var(--text-color-1);
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.owner-register-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.owner-register-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 11%;
+  background-color: var(--text-color-1);
+  padding-block: 0.5rem;
+}
+
+.owner-register-header-logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .owner-register-page {
+    display: flex;
+  }
+
+  .owner-register-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .owner-register-header {
+    padding-inline: 1rem;
+  }
+}

@@ -13,6 +13,12 @@ import RestoOwnerDashboard from "./pages/resto-owner-dashboard/restoOwnerDashboa
 import Unauthorized from "./pages/unauthorized/unauthorized";
 import PrivateRoutes from "./utils/privateRoutes";
 import OwnerPrivateRoutes from "./utils/ownerPrivateRoutes";
+import RestaurantPage from "./pages/restaurants-page/restaurantPage";
+import RestaurantDetails from "./pages/restaurant-details/restaurantDetails";
+import NotFoundPage from "./pages/not-found-page/notFoundPage";
+import OwnerRegister from "./pages/owner-register/ownerRegister";
+import logo from "./assets/images/QUICK BITE LOGO.svg";
+import UserProfile from "./pages/user-profile/userProfile";
 
 function App() {
   const location = useLocation();
@@ -22,21 +28,38 @@ function App() {
   const isAdminDashboardPath = location.pathname === "/admin-dashboard";
   const isOwnerDashboardPath = location.pathname === "/owner-dashboard";
   const isDashboardPath = isAdminDashboardPath || isOwnerDashboardPath;
+  const isRestaurantPath = location.pathname === "/restaurants";
+  const isRestaurantDetailsPath = location.pathname.startsWith("/restaurant");
+  const isOwnerRegisterPath = location.pathname === "/owner-register";
 
   const isProductUserLoginPath =
-    isUserLoginPath || isProductPath || isAdminLoginPath || isDashboardPath;
+    isUserLoginPath ||
+    isProductPath ||
+    isAdminLoginPath ||
+    isDashboardPath ||
+    isRestaurantPath ||
+    isRestaurantDetailsPath ||
+    isOwnerRegisterPath;
   const isUserAdminLoginPath =
-    isUserLoginPath || isAdminLoginPath || isDashboardPath;
+    isUserLoginPath ||
+    isAdminLoginPath ||
+    isDashboardPath ||
+    isOwnerRegisterPath;
   return (
     <ProductDataProvider>
       <div className="App">
-        {!isProductUserLoginPath && <Header />}
+        {!isProductUserLoginPath && <Header logo={logo} />}
         <Routes>
           <Route>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/user-login" element={<UserLoginPage />} />
             <Route path="/admin-login" element={<AdminLoginPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/restaurants" element={<RestaurantPage />} />
+            <Route path="/restaurant/:id" element={<RestaurantDetails />} />
+            <Route path="/owner-register" element={<OwnerRegister />} />
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/*" element={<NotFoundPage />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
           </Route>
           <Route path="/" element={<PrivateRoutes />}>

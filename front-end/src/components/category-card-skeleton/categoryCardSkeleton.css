@@ -1,0 +1,40 @@
+.category-card-skeleton {
+  width: 100px;
+  flex: 1 0 100px;
+  border: 2px solid #d3d3d3;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  animation: cat-skeleton-animation 1s infinite;
+}
+
+.category-card-skeleton div,
+.category-card-skeleton p {
+  width: 60%;
+  background-color: #d3d3d3;
+  border-radius: var(--border-radius);
+}
+
+.category-card-img-skeleton {
+  height: 50%;
+}
+
+.category-card-skeleton p {
+  height: 20px;
+}
+
+@keyframes cat-skeleton-animation {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}

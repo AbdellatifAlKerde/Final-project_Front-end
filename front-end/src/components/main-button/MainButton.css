@@ -5,6 +5,7 @@
   padding: 1rem 1.5rem;
   border-radius: var(--border-radius-mini);
   font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 1px;
   transition: transform 0.5s;
   box-shadow: var(--box-shadow);

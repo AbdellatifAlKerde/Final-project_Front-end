@@ -6,6 +6,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import Spinner from "../../components/spinner/spinner";
 import { useNavigate } from "react-router-dom";
+import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 function UserLoginPage() {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ function UserLoginPage() {
       if (response.status === 200) {
         const oneWeek = 7 * 24 * 60 * 60 * 1000;
         Cookies.set("user-token", response.data.token, { expires: oneWeek });
-        localStorage.setItem("user-id", response.data._id);
+        Cookies.set("user-id", response.data._id, { expires: oneWeek });
       } else {
         console.error(response.data.message);
       }
@@ -117,6 +118,9 @@ function UserLoginPage() {
   return (
     <section className="user-login-page-container">
       <div className="user-login-section">
+        <div className="user-login-back-arrow" onClick={handleButtonClick}>
+          <ArrowBackRoundedIcon />
+        </div>
         <div className="user-login-heading">
           <h2>{isSignup ? "Signup" : "Login"}</h2>
         </div>

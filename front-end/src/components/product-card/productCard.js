@@ -13,7 +13,7 @@ function ProductCard(props) {
   };
 
   return (
-    <div className="product-card" onClick={props.onClick}>
+    <div className="product-card" style={props.style} onClick={props.onClick} key={props.key}>
       <div className="product-card-img">
         <img src={props.src} alt={props.alt} />
       </div>

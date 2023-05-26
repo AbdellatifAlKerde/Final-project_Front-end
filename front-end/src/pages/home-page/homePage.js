@@ -60,7 +60,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <iframe
+      {/* <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210307.4748130264!2d36.04394648513813!3d34.5521806784511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1522398ea415e347%3A0x3bfee2bc9c74f81b!2sAkkar%20Governorate!5e0!3m2!1sen!2slb!4v1684006519840!5m2!1sen!2slb"
         width="100%"
         height="600"
@@ -68,7 +68,7 @@ function HomePage() {
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }
